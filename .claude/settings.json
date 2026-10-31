@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git restore *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git mv *)",
+      "Bash(mkdir -p src/shared/types/db)",
+      "Bash(rmdir src/types/db)",
+      "Bash(rmdir src/types)",
+      "Bash(node \"C:/Users/USUARIO/AppData/Local/Temp/claude/d--FABRICA-REACT-BUMAM-buman-padre/c1ffdf87-2879-4c46-976c-7d0c1b0bbe1d/scratchpad/codemod.mjs\")",
+      "Bash(rmdir src/shared/lib)",
+      "Bash(npx vite *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(chromium-cli --help)",
+      "Bash(taskkill //F //PID 2000)",
+      "Bash(npx tsc *)",
+      "WebSearch",
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(netstat -ano)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}

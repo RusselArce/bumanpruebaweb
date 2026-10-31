@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Tema claro/oscuro manual (clase .dark en <html>), en vez de solo
+   prefers-color-scheme: así el toggle de la UI manda sobre el SO. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Variables para estilos con inline-style (backgroundImage, etc.) que no
+   pueden usar el prefijo dark: de Tailwind directamente. */
+:root {
+  --mesa-canvas-dot: #d1d5db;
+}
+.dark {
+  --mesa-canvas-dot: #37464f;
+}
+
+/* Saludo con la mano en el login */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+}
+
+/* ===== Custom Scrollbar (POS) ===== */
+.custom-scrollbar {
+  scrollbar-width: thin;                 /* Firefox */
+  scrollbar-color: #37464f transparent;  /* thumb / track */
+}
+
+/* Chrome / Edge / Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #37464f;      /* barrita */
+  border-radius: 999px;
+  border: 2px solid transparent;         /* hace “padding” */
+  background-clip: content-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #58cc02;      /* hover verde duolingo */
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* opcional: esquina (cuando hay scroll X e Y) */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
